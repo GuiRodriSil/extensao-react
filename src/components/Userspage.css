@@ -1,0 +1,31 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; 
+    color: #fff; 
+  }
+  
+  .sidebar {
+    padding: 20px;
+  }
+  
+  .user-item {
+    background: #2a2a2a;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    color:green;
+  }
+  
+  .loading,
+  .error {
+    color: rgba(255, 0, 0, 0.847); 
+  }

@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; /* Fundo escuro */
+    color: #fff; /* Texto claro */
+  }
+  
+  .sidebar {
+    padding: 20px;
+  }
+  
+  .contact-item {
+    background: #2a2a2a; /* Cor de fundo dos itens */
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  .loading,
+  .error {
+    color: red; /* Cor do texto de erro */
+  }
