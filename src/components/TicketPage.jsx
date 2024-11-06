@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import './TicketPage.css'; 
+import './TicketPage.css';
 
 const TicketPage = () => {
   const [ticket, setTicket] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     const fetchTicket = async () => {
@@ -25,13 +26,21 @@ const TicketPage = () => {
     fetchTicket();
   }, []);
 
+  const toggleExpansion = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   if (loading) return <div className="loading">Carregando...</div>;
   if (error) return <div className="error">Erro: {error}</div>;
 
   return (
     <div className="ticket-page">
-      <h2>Dados do Ticket</h2>
-      {ticket ? (
+      <div className="panel-header" onClick={toggleExpansion}>
+        <h2 className="ticket">Dados do Ticket</h2>
+        <span className="arrow">{isExpanded ? '▲' : '▼'}</span>
+      </div>
+
+      {isExpanded && ticket ? (
         <div className="user-item">
           <p>ID do Ticket: {ticket.id}</p>
           <p>Status: {ticket.status}</p>
@@ -45,7 +54,7 @@ const TicketPage = () => {
           <p>Data de Criação: {new Date(ticket.createdAt).toLocaleString()}</p>
           <p>Data de Atualização: {new Date(ticket.updatedAt).toLocaleString()}</p>
          
-          <h3>Informações de usuario</h3>
+          <h3>Informações de usuário</h3>
           <p>ID do Contato: {ticket.contact.id}</p>
           <p>Nome: {ticket.contact.name}</p>
           <p>Número: {ticket.contact.number}</p>
@@ -55,30 +64,27 @@ const TicketPage = () => {
           <p>Nome do contato: {ticket.contact.firstConnectionModel.name}</p>
           <p>Status: {ticket.contact.firstConnectionModel.status || 'Não informado'}</p>
           <p>Email: {ticket.contact.email || 'Não informado'}</p>
-          <h3>Informações Bascias do contato</h3>
-          <p>ID do usuario: {ticket.user.id} </p>
+
+          <h3>Informações Básicas do contato</h3>
+          <p>ID do usuário: {ticket.user.id} </p>
           <p>Nome: {ticket.user.name}</p>
-          <p>Email {ticket.user.email}</p>
+          <p>Email: {ticket.user.email}</p>
            
-          <h3>whatsapp</h3>
-          <p>Id: {ticket.whatsapp.id}</p>
+          <h3>WhatsApp</h3>
+          <p>ID: {ticket.whatsapp.id}</p>
           <p>Nome: {ticket.whatsapp.name}</p>
           <p>Tipo: {ticket.whatsapp.type}</p>
           
           <h3>Fila</h3>
-          <p>Id: {ticket.queue.id}</p>
-          <p>Fila {ticket.queue.queue}</p>
-          <p>Status da fila: {ticket.queue.isActive ? 'Ativo':'não está ativa'}</p>
-          <p>Id de usuario na fila: {ticket.queue.userId}</p>
+          <p>ID: {ticket.queue.id}</p>
+          <p>Fila: {ticket.queue.queue}</p>
+          <p>Status da fila: {ticket.queue.isActive ? 'Ativo' : 'Não está ativa'}</p>
+          <p>ID de usuário na fila: {ticket.queue.userId}</p>
           <p>Criado em: {ticket.queue.createdAt}</p>
           <p>Atualizado em: {ticket.queue.updatedAt}</p>
-          
-         
-
-
         </div>
       ) : (
-        <p>Nenhum ticket encontrado.</p>
+        <p>Informação dos tickets.</p>
       )}
     </div>
   );

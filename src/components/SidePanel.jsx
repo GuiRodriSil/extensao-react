@@ -5,6 +5,7 @@ const SidePanel = () => {
   const [contacts, setContacts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     const fetchContacts = async () => {
@@ -25,56 +26,65 @@ const SidePanel = () => {
     fetchContacts();
   }, []);
 
+  const toggleExpansion = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   if (loading) {
-    return <div className="loading" >Carregando...</div>;
+    return <div className="loading">Carregando...</div>;
   }
 
   if (error) {
-    return <div className="error" >Erro: {error}</div>;
+    return <div className="error">Erro: {error}</div>;
   }
 
   return (
     <div className="sidebar">
-      <h2>Contatos</h2>
-      {contacts.length > 0 ? (
-        contacts.map((contact) => (
-          <div key={contact.id} className="contact-item">
-            <div><strong>ID:</strong> {contact.id || 'N/A'}</div>
-            <div><strong>Nome:</strong> {contact.name || 'N/A'}</div>
-            <div><strong>Título:</strong> {contact.title || 'N/A'}</div>
-            <div><strong>Notas:</strong> {contact.notes || 'N/A'}</div>
+      <div className="panel-header" onClick={toggleExpansion}>
+        <h2 className="contato">Contatos RD station </h2>
+        <span className="arrow">{isExpanded ? '▲' : '▼'}</span>
+      </div>
+      
+      {isExpanded && (
+        <div className="panel-content">
+          {contacts.length > 0 ? (
+            contacts.map((contact) => (
+              <div key={contact.id} className="contact-item">
+                <div><strong>ID:</strong> {contact.id || 'N/A'}</div>
+                <div><strong>Nome:</strong> {contact.name || 'N/A'}</div>
+                <div><strong>Título:</strong> {contact.title || 'N/A'}</div>
+                <div><strong>Notas:</strong> {contact.notes || 'N/A'}</div>
 
-            {/* Emails */}
-            {contact.emails && contact.emails.length > 0 && (
-              <div>
-                <h4>E-mails:</h4>
-                {contact.emails.map((emailItem, index) => (
-                  <div key={index}>
-                    <div><strong>Email:</strong> {emailItem.email || 'N/A'}</div>
+                {contact.emails && contact.emails.length > 0 && (
+                  <div>
+                    <h4> Informação dos E-mails:</h4>
+                    {contact.emails.map((emailItem, index) => (
+                      <div key={index}>
+                        <div><strong>Email:</strong> {emailItem.email || 'N/A'}</div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            )}
+                )}
 
-            {/* Telefones */}
-            {contact.phones && contact.phones.length > 0 && (
-              <div>
-                <h4>Telefones:</h4>
-                {contact.phones.map((phoneItem, index) => (
-                  <div key={index}>
-                    <div><strong>Telefone:</strong> {phoneItem.phone || 'N/A'}</div>
+                {contact.phones && contact.phones.length > 0 && (
+                  <div>
+                    <h4>Telefones:</h4>
+                    {contact.phones.map((phoneItem, index) => (
+                      <div key={index}>
+                        <div><strong>Telefone:</strong> {phoneItem.phone || 'N/A'}</div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                )}
               </div>
-            )}
-          </div>
-        ))
-      ) : (
-        <div>Nenhum contato encontrado.</div>
+            ))
+          ) : (
+            <div>Nenhum contato encontrado.</div>
+          )}
+        </div>
       )}
     </div>
   );
 };
 
-
-export default SidePanel
+export default SidePanel;

@@ -1,22 +1,21 @@
-import './dadosgerais.css';
+import "./dadosgerais.css";
 
 const DadosGerais = () => {
-     
-    return (
-      <div class="box">
-        <h1> Dados Gerais </h1>
-        <p>
-            ID: #1234567890
-            Dados
-            Nome: Eduarda Braga
-            Telefone: (xx)xxxx-xxxx
-            Email: Teste@email.com
-            Departamento: None
-            Data de contato: 21/10/2024
-       </p>
-</div>
-    )
-  }
+  return (
+    <div className="box1">
+      <div className="title"> Dados Gerais </div>
+      <div className="box2">
+        <div className="data">
+          <p>ID: #1234567890</p>
+          <p>Dados Nome: Eduarda Braga</p>
+          <p>Telefone: (xx)xxxx-xxxx</p>
+          <p>Email: Teste@email.com</p>
+          <p>Departamento: None</p>
+          <p>Data de contato: 21/10/2024</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default  DadosGerais 
-
+export default DadosGerais;
