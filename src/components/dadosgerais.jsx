@@ -1,5 +1,6 @@
 import "./dadosgerais.css";
 
+
 const DadosGerais = () => {
   return (
     <div className="box1">
