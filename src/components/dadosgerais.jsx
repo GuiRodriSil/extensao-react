@@ -17,6 +17,6 @@ const DadosGerais = () => {
       </div>
     </div>
   );
-};
+};  
 
 export default DadosGerais;

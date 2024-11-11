@@ -17,7 +17,7 @@ function App() {
               <Link to="/Principal">Principal</Link>
             </li>
             <li>
-              <Link to="/sidepanel">Side Panel</Link>
+              <Link to="/sidepanel">RD station</Link>
             </li>
             <li>
               <Link to="/userspage">Usuários</Link>
@@ -27,11 +27,12 @@ function App() {
             </li>
           </ul>
         </nav>
+        
         <Routes>
           <Route path="/Principal" element={<Principal />} />
           <Route path="/sidepanel" element={<SidePanel />} />
           <Route path="/userspage" element={<UsersPage />} />
-          <Route path="/ticketpage" element={<TicketPage />} />
+          <Route path="/ticketpage" element={<TicketPage/>} />
         </Routes>
       </div>
     </Router>

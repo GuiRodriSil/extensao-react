@@ -9,7 +9,7 @@ import DadosGerais from "./dadosgerais";
 const Principal = () => {
     return (
       <div className="app-container">
-        
+
         <div className="section-container">
           <TicketPage />
         </div>
@@ -21,6 +21,7 @@ const Principal = () => {
         <div className="section-container">
           <SidePanel />
         </div>
+
       </div>
     );
   };
