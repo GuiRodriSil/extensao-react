@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import SidePanel from "./components/SidePanel";
+import DadosRD from "./components/DadosRD";
 import UsersPage from "./components/UsersPage";
 import TicketPage from "./components/TicketPage";
 import Principal from "./components/Principal";
@@ -17,7 +17,7 @@ function App() {
               <Link to="/Principal">Principal</Link>
             </li>
             <li>
-              <Link to="/sidepanel">RD station</Link>
+              <Link to="/DadosRD">RDstation</Link>
             </li>
             <li>
               <Link to="/userspage">Usuários</Link>
@@ -30,7 +30,7 @@ function App() {
         
         <Routes>
           <Route path="/Principal" element={<Principal />} />
-          <Route path="/sidepanel" element={<SidePanel />} />
+          <Route path="/DadosRD" element={<DadosRD />} />
           <Route path="/userspage" element={<UsersPage />} />
           <Route path="/ticketpage" element={<TicketPage/>} />
         </Routes>
