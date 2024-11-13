@@ -1,11 +1,5 @@
-* {
-  margin: 8px;
-  padding: 0px;
-  background: #000000;
-}
-
 .Links {
-  display:flexbox;
+  display: flex;
   text-align: center;
   justify-content: center;
   color: green;
@@ -17,25 +11,23 @@
 }
 
 nav {
-  align-items: center;
-  background-color: #000000; 
-  padding: 2px; 
+  background-color: #131212; 
+  padding: 1em; 
 }
 
 
 nav ul {    list-style-type: none;
   margin: 0;
   padding: 0;
-  display: inline-flexbox; 
+  display: flex; 
   justify-content: space-around; 
 }
 
 nav ul li a {
-  color: rgb(255, 255, 255); 
+  color: white; 
   text-decoration: none; 
-  padding: 4px; 
+  padding: 0.5em 1em; 
   transition: background-color 0.3s;
-  font-size: 16px;
 }
 
 nav ul li a:hover {
