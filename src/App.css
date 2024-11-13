@@ -9,6 +9,10 @@
   text-decoration: none;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+h1{
+  text-align: center;
+  color: green;
+}
 
 nav {
   background-color: #131212; 
