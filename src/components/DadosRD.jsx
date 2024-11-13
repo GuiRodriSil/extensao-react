@@ -1,8 +1,7 @@
 import DealPage from "./DealPage";
-import "./Principal.css";
 import SidePanel from "./SidePanel";
 import DadosGerais from "./dadosgerais";
-
+import "./Principal.css";
 
 
 const DadosRD = () => {
