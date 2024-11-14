@@ -39,48 +39,50 @@ const DealPage = () => {
   }
 
   return (
-    <div className="deal-page">
+    <div className="sidebar">
       <div className="panel-header" onClick={toggleExpansion}>
-        <h2 className="deal">Detalhes da negociação</h2>
+        <h2 className="deal">Detalhes da Negociação</h2>
         <span className="arrow">{isExpanded ? '▲' : '▼'}</span>
       </div>
       
-      {isExpanded && deal ? (
+      {isExpanded && (
         <div className="panel-content">
-          <div className="deal-item">
-            <div><strong>ID do Deal:</strong> {deal.id}</div>
-            <div><strong>Nome:</strong> {deal.name}</div>
-            <div><strong>Valor Mensal:</strong> {deal.amount_montly}</div>
-            <div><strong>Valor Único:</strong> {deal.amount_unique}</div>
-            <div><strong>Valor Total:</strong> {deal.amount_total}</div>
-            <div><strong>Data de Previsão:</strong> {deal.prediction_date || 'Não informado'}</div>
-            <div><strong>Markup:</strong> {deal.markup}</div>
-            <div><strong>Última Atividade:</strong> {deal.last_activity_at || 'Não disponível'}</div>
-            <div><strong>Interações:</strong> {deal.interactions}</div>
-            <div><strong>Data de Criação:</strong> {new Date(deal.created_at).toLocaleString()}</div>
-            <div><strong>Data de Atualização:</strong> {new Date(deal.updated_at).toLocaleString()}</div>
-            <div><strong>Avaliação:</strong> {deal.rating}</div>
-            <div><strong>Markup Criado:</strong> {deal.markup_created}</div>
-          </div>
+          {deal ? (
+            <div className="deal-item">
+              <div><strong>ID do Deal:</strong> {deal.id}</div>
+              <div><strong>Nome:</strong> {deal.name}</div>
+              <div><strong>Valor Mensal:</strong> {deal.amount_montly}</div>
+              <div><strong>Valor Único:</strong> {deal.amount_unique}</div>
+              <div><strong>Valor Total:</strong> {deal.amount_total}</div>
+              <div><strong>Data de Previsão:</strong> {deal.prediction_date || 'Não informado'}</div>
+              <div><strong>Markup:</strong> {deal.markup}</div>
+              <div><strong>Última Atividade:</strong> {deal.last_activity_at || 'Não disponível'}</div>
+              <div><strong>Interações:</strong> {deal.interactions}</div>
+              <div><strong>Data de Criação:</strong> {new Date(deal.created_at).toLocaleString()}</div>
+              <div><strong>Data de Atualização:</strong> {new Date(deal.updated_at).toLocaleString()}</div>
+              <div><strong>Avaliação:</strong> {deal.rating}</div>
+              <div><strong>Markup Criado:</strong> {deal.markup_created}</div>
 
-          <h3>Informações do Usuário</h3>
-          <div><strong>ID do Usuário:</strong> {deal.user.id}</div>
-          <div><strong>Nome:</strong> {deal.user.name}</div>
-          <div><strong>Email:</strong> {deal.user.email}</div>
-          <div><strong>Apelido:</strong> {deal.user.nickname}</div>
+              <h3>Informações do Usuário</h3>
+              <div><strong>ID do Usuário:</strong> {deal.user.id}</div>
+              <div><strong>Nome:</strong> {deal.user.name}</div>
+              <div><strong>Email:</strong> {deal.user.email}</div>
+              <div><strong>Apelido:</strong> {deal.user.nickname}</div>
 
-          <h3>Estágio do Deal</h3>
-          <div><strong>Nome do Estágio:</strong> {deal.deal_stage.name}</div>
-          <div><strong>Apelido:</strong> {deal.deal_stage.nickname}</div>
+              <h3>Estágio do Deal</h3>
+              <div><strong>Nome do Estágio:</strong> {deal.deal_stage.name}</div>
+              <div><strong>Apelido:</strong> {deal.deal_stage.nickname}</div>
 
-          <h3>Fonte do Deal</h3>
-          <div><strong>Nome da Fonte:</strong> {deal.deal_source.name}</div>
+              <h3>Fonte do Deal</h3>
+              <div><strong>Nome da Fonte:</strong> {deal.deal_source.name}</div>
 
-          <h3>Campanha</h3>
-          <div><strong>Nome da Campanha:</strong> {deal.campaign.name}</div>
+              <h3>Campanha</h3>
+              <div><strong>Nome da Campanha:</strong> {deal.campaign.name}</div>
+            </div>
+          ) : (
+            <div>Informação do deal.</div>
+          )}
         </div>
-      ) : (
-        <p>Informação do deal.</p>
       )}
     </div>
   );
