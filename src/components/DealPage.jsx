@@ -39,7 +39,7 @@ const DealPage = () => {
   }
 
   return (
-    <div className="sidebar">
+    <div className="sidebardeal">
       <div className="panel-header" onClick={toggleExpansion}>
         <h2 className="deal">Detalhes da Negociação</h2>
         <span className="arrow">{isExpanded ? '▲' : '▼'}</span>
