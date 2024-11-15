@@ -6,7 +6,9 @@ import Principal from "./components/Principal";
 const App = () => {
     return (
       <div>
-      <h1>TESTE</h1>
+      <h1>
+      <img src="JETDATA.jpg" alt="JETDATA" />
+      </h1>
       <Principal/>
       </div>
     );

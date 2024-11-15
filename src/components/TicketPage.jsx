@@ -40,7 +40,7 @@ const TicketPage = () => {
         <span className="arrow">{isExpanded ? '▲' : '▼'}</span>
       </div>
 
-      {isExpanded && ticket ? (
+      {isExpanded && ticket && (
         <div className="user-item">
           <p>ID do Ticket: {ticket.id}</p>
           <p>Status: {ticket.status}</p>
@@ -83,8 +83,6 @@ const TicketPage = () => {
           <p>Criado em: {ticket.queue.createdAt}</p>
           <p>Atualizado em: {ticket.queue.updatedAt}</p>
         </div>
-      ) : (
-        <p>Informação dos tickets.</p>
       )}
     </div>
   );
