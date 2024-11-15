@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './TicketPage.css';
+import './Dealpage.css';
 
 const DealPage = () => {
   const [deal, setDeal] = useState(null);
