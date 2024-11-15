@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "React Chrome Extension",
+    "name": "JetData",
     "version": "1.0",
-    "description": "A Chrome extension",
+    "description": "extensão complementar para a JetGo",
     "action": {
       "default_popup": "index.html"
     },

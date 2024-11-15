@@ -12,10 +12,13 @@
 h1{
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-color:darkgreen;
+  margin-top: -30px;
 }
 img{
-  width: 300px;
+  width: 270px;
+  margin-bottom: -75px;
+  align-items: center;
 }
 
 nav {
@@ -41,4 +44,8 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #555; 
   border-radius: 5px; 
+}
+
+#root {
+  background-color:darkgreen ;
 }
