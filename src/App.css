@@ -10,8 +10,12 @@
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 h1{
-  text-align: center;
-  color: green;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+img{
+  width: 300px;
 }
 
 nav {

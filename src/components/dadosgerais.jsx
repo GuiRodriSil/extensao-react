@@ -41,7 +41,7 @@ const DadosGerais = () => {
   return (
     <div className="sidebar">
       <div className="panel-header" onClick={toggleExpansion}>
-        <h2 className="contato">Organizações RD Station</h2>
+        <h2 className="panel-title">Organizações RD Station</h2>
         <span className="arrow">{isExpanded ? '▲' : '▼'}</span>
       </div>
       
@@ -49,8 +49,8 @@ const DadosGerais = () => {
         <div className="panel-content">
           {organizations.length > 0 ? (
             organizations.map((organization) => (
-              <div key={organization.id} className="organization-item">
-                <div><strong>ID:</strong> {organization.id}</div>
+              <div key={organization.id} className="item">
+                <div><strong>ID:</strong> {organization.id || 'N/A'}</div>
                 <div><strong>Nome:</strong> {organization.resume || 'N/A'}</div>
                 <div><strong>Resumo:</strong> {organization.resume || 'N/A'}</div>
                 <div><strong>Contagem de vitórias:</strong> {organization.won_count}</div>

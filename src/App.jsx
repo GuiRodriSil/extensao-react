@@ -7,7 +7,7 @@ const App = () => {
     return (
       <div>
       <h1>
-      <img src="JETDATA.jpg" alt="JETDATA" />
+      <img src="JetData3.jpg" alt="JETDATA" />
       </h1>
       <Principal/>
       </div>
