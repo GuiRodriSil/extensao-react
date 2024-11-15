@@ -1,17 +1,19 @@
 .usuario {
-  color: green;
+  color: rgb(255, 255, 255);
   font-size: 24px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .user-item {
-    background-color: #222;
+    background-color: #ffffff;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 1px;
     width: 300px;
+    margin-bottom: 40px;
 }
 
 .panel-header {
@@ -29,4 +31,11 @@
 .user-details {
   margin-top: 10px;
   font-size: 14px;
+  background-color: #222;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.nome  {
+color: black;
 }

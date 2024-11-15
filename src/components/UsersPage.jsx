@@ -42,7 +42,7 @@ const UsersPage = () => {
       {users.map((user) => (
         <div key={user.id} className="user-item">
           <div className="panel-header" onClick={() => toggleExpansion(user.id)}>
-            <p><strong>Nome:</strong> {user.name}</p>
+            <p className="nome"><strong>Nome:</strong> {user.name}</p>
             <span className="arrow">{expandedUserIds[user.id] ? '▲' : '▼'}</span>
           </div>
           

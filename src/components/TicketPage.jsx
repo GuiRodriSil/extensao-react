@@ -41,7 +41,7 @@ const TicketPage = () => {
       </div>
 
       {isExpanded && ticket && (
-        <div className="user-item">
+        <div className="ticket-item">
           <p>ID do Ticket: {ticket.id}</p>
           <p>Status: {ticket.status}</p>
           <p>Mensagens Não Lidas: {ticket.unreadMessages}</p>

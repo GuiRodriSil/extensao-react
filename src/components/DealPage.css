@@ -1,6 +1,6 @@
-.ticket-page {
+.sidebardeal{
   background-color:#fff;
-  color: #000000;
+  color: #ffffff;
   border-radius: 20px;
   padding: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -31,17 +31,21 @@ h3{
 
 }
 
-.ticket-item {
-  background-color: #222;
-  color: #fff;
-  border-radius: 20px;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 1px;
+.deal-item {
+  margin-top: 10px;
+  font-size: 14px;
   width: 280px;
 }
 
 .loading, .error {
   text-align: center;
   font-size: 16px;
+}
+
+.panel-content {
+  margin-top: 10px;
+  font-size: 14px;
+  background-color: #222;
+  border-radius: 20px;
+  padding: 10px;
 }
